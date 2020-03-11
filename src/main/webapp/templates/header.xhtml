@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<ui:composition>
+    <h:form>
+        <div class="w3-bar w3-black">
+            <ui:fragment rendered="true" >
+                <h:link value="Create Book" outcome="/app/new-book.xhtml" styleClass="w3-bar-item w3-button"/>
+            </ui:fragment>
+            <ui:fragment >
+                <h:link value="My Books" outcome="/app/my-books.xhtml" styleClass="w3-bar-item w3-button"/>
+            </ui:fragment>
+
+        </div>
+    </h:form>
+</ui:composition>
+</html>

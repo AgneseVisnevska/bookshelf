@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="/templates/main.xhtml">
+    <ui:define name="content">
+        <f:metadata>
+            <f:viewAction action="#{myBooksController.prepare}"/>
+        </f:metadata>
+
+        <h2>Available books</h2>
+        <h:form id="books">
+            <h:dataTable id="books" value="#{myBooksController.books}" var="book">
+
+                <h:column>
+                    <f:facet name="header">ID</f:facet>
+                    <h:outputText value="#{book.id}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Title</f:facet>
+                    <h:outputText value="#{book.title}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">ISBN</f:facet>
+                    <h:outputText value="#{book.isbn}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Author</f:facet>
+                    <h:outputText value="#{book.author}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Year</f:facet>
+                    <h:outputText value="#{book.year}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Description</f:facet>
+                    <h:outputText value="#{book.description}"/>
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </ui:define>
+</ui:composition>
+
+</html>
